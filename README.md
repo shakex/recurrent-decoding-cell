@@ -4,7 +4,7 @@ This is the PyTorch implementation for **AAAI 2020** paper [Segmenting Medical M
 ![network](images/network.png)
 
 ## Overview
-[Recurrent Decoding Cell](https://github.com/shakex/Recurrent-Decoding-Cell) (RDC) is a novel feature fusion unit used in the encoder-decoder segmentation network for MRI segmentation. RDC leverages convolutional RNNs (e.g. [ConvLSTM](https://arxiv.org/abs/1506.04214), [ConvGRU](https://arxiv.org/abs/1706.03458)) to memorize the long-term context information from the previous layers in the decoding phase. The RDC based encoder-decoder network named Convolutional Recurrent Decoding Network (CRDN) achieves promising semgmentation reuslts -- **99.34% dice score on BrainWeb, 91.26% dice score on MRBrainS, and 88.13% dice score on HVSMR**. The model is also robust to image noise and intensity non-uniformity in medical MRI.
+[Recurrent Decoding Cell](https://github.com/shakex/Recurrent-Decoding-Cell) (RDC) is a novel feature fusion unit used in the encoder-decoder segmentation network for MRI segmentation. RDC leverages convolutional RNNs (e.g. [ConvLSTM](https://arxiv.org/abs/1506.04214), [ConvGRU](https://arxiv.org/abs/1706.03458)) to memorize the long-term context information from the previous layers in the decoding phase. The RDC based encoder-decoder network named Convolutional Recurrent Decoding Network (CRDN) achieves promising semgmentation reuslts -- **99.34% dice score on [BrainWeb](https://brainweb.bic.mni.mcgill.ca/brainweb/), 91.26% dice score on [MRBrainS](https://mrbrains13.isi.uu.nl/), and 88.13% dice score on [HVSMR](http://segchd.csail.mit.edu/data.html)**. The model is also robust to image noise and intensity non-uniformity in medical MRI.
 
 ## Models Implemented
 * [FCN](https://arxiv.org/abs/1411.4038)
@@ -27,8 +27,10 @@ This is the PyTorch implementation for **AAAI 2020** paper [Segmenting Medical M
 * numpy == 1.11.3
 * tqdm == 4.31.1
 
-### One-line installation
+**One-line installation**
+
 `pip install -r requirements.txt`
+
 
 ## Datasets
 
