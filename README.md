@@ -43,7 +43,6 @@ This is the PyTorch implementation for **AAAI 2020** paper [Segmenting Medical M
 ```yaml
 model:
     arch: <name> [options: 'FCN, SegNet, UNet, VGG16RNN, ResNet50RNN, UNetRNN, VGGUNet, ResNet50UNet, UNetFCN, ResNet50FCN, UNetSegNet']
-TinyRNN
 
 data:
     dataset: <name> [options: 'BrainWeb, MRBrainS, HVSMR']
