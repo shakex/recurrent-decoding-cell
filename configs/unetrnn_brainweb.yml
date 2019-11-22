@@ -1,0 +1,29 @@
+model:
+    arch: UNetRNN
+data:
+    dataset: BrainWeb
+    train_split: train
+    val_split: val
+    path:
+
+training:
+    gpu_idx: 0
+    train_iters: 30000
+    batch_size: 1
+    val_interval: 300
+    n_workers: 4
+    print_interval: 100
+    optimizer:
+        name: 'adam'
+        lr: 6.0e-4
+        weight_decay: 0.0005
+    loss:
+        name: 'cross_entropy'
+    lr_schedule:
+    resume:
+    model_dir:
+
+testing:
+    trained_model:
+    path:
+    boxplot: False

@@ -1,0 +1,7 @@
+# local files
+.DS_Store
+*/.DS_Store
+.idea
+
+# python
+*.pyc
