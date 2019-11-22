@@ -3,41 +3,41 @@ This is the PyTorch implementation for **AAAI 2020** paper [Segmenting Medical M
 
 ![network](images/network.png)
 
-### Overview
+## Overview
 [Recurrent Decoding Cell](https://github.com/shakex/Recurrent-Decoding-Cell) (RDC) is a novel feature fusion unit used in the encoder-decoder segmentation network for MRI segmentation. RDC leverages convolutional RNNs (e.g. [ConvLSTM](https://arxiv.org/abs/1506.04214), [ConvGRU](https://arxiv.org/abs/1706.03458)) to memorize the long-term context information from the previous layers in the decoding phase. The RDC based encoder-decoder network named Convolutional Recurrent Decoding Network (CRDN) achieves promising semgmentation reuslts -- **99.34% dice score on BrainWeb, 91.26% dice score on MRBrainS, and 88.13% dice score on HVSMR**. The model is also robust to image noise and intensity non-uniformity in medical MRI.
 
-### Models Icluded
+## Models Implemented
 * [FCN](https://arxiv.org/abs/1411.4038)
 * [SegNet](https://arxiv.org/abs/1511.00561)
 * [UNet](https://arxiv.org/abs/1505.04597)
-* [CRDN (Ours)](https://arxiv.org/abs/1911.09401) with different encoders
-    * CRDN with VGG16 (VGG16RNN)
-    * CRDN with ResNet50 (ResNet50RNN/)
-    * CRDN with U-Net-backbone (UNetRNN)
-* U-Net(decoder) with VGG16(encoder) (VGGUNet)
-* U-Net(decoder) with ResNet50(encoder) (ResNet50UNet)
-- FCN(decoder) with U-Net-backbone(encoder) (UNetFCN)
-- FCN(decoder) with ResNet50(encoder) (ResNet50FCN)
-- SegNet(decoder) with U-Net-backbone(encoder) (UNetSegNet)
+* [CRDN (Ours) with different encoders](https://arxiv.org/abs/1911.09401)
+    * [CRDN with VGG16 (VGG16RNN)](models/CRDN.py)
+    * [CRDN with ResNet50 (ResNet50RNN)](models/CRDN.py)
+    * [CRDN with U-Net-backbone (UNetRNN)](models/CRDN.py)
+* [U-Net(decoder) with VGG16(encoder) (VGGUNet)](models/UNet.py)
+* [U-Net(decoder) with ResNet50(encoder) (ResNet50UNet)](models/CRDN.py)
+- [FCN(decoder) with U-Net-backbone(encoder) (UNetFCN)](models/UNet.py)
+- [FCN(decoder) with ResNet50(encoder) (ResNet50FCN)](models/CRDN.py)
+- [SegNet(decoder) with U-Net-backbone(encoder) (UNetSegNet)](models/UNet.py)
 
-### Enviroments
+## Enviroments
 * pytorch == 1.1.0
 * torchvision == 0.2.2.post3
 * matplotlib == 2.1.0
 * numpy == 1.11.3
 * tqdm == 4.31.1
 
-#### One-line installation
+### One-line installation
 `pip install -r requirements.txt`
 
-### Datasets
+## Datasets
 
 * [BrainWeb (Normal Brain Database)](https://brainweb.bic.mni.mcgill.ca/brainweb/selection_normal.html)
 * [MRBrainS 2013](https://mrbrains13.isi.uu.nl/)
 * [HVSMR 2016](http://segchd.csail.mit.edu/data.html)
 
 
-### Usage
+## Usage
 **Setup config**
 
 ```yaml
@@ -86,17 +86,23 @@ testing:
 ```
 
 **To train the model :**
+
 run `train.py`
 
 **To test the model :**
+
 run `test.py`
 
+## Results
+* Some visualization results of the proposed CRDN and other encoding-decoding methods.
+![vis](images/vis.png)
 
+* please refer to the paper for other experiments. (ablation study, comparisons, network robustness)
 
-### Acknowledgements
-Special thanks for the source code of 
+## Acknowledgements
+Special thanks for the github repository [meetshah1995/pytorch-semseg](https://github.com/meetshah1995/pytorch-semseg) for providing the semacntic segmentation algorithms in PyTorch.
 
-### Citation
+## Citation
 Please cite these papers in your publications if it helps your research:
 ```bib
 @article{wen2020rdc,
