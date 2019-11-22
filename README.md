@@ -1,4 +1,6 @@
 # Recurrent Decoding Cell
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/shakex/Recurrent-Decoding-Cell/blob/master/LICENSE)
+
 This is the PyTorch implementation for **AAAI 2020** paper [Segmenting Medical MRI via Recurrent Decoding Cell](https://arxiv.org/abs/1911.09401) by Ying Wen, Kai Xie, Lianghua He.
 
 ![network](images/network.png)
