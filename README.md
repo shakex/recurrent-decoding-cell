@@ -108,11 +108,12 @@ Special thanks for the github repository [meetshah1995/pytorch-semseg](https://g
 ## Citation
 Please cite these papers in your publications if it helps your research:
 ```bib
-@article{wen2020rdc,
-    title={Segmenting Medical MRI via Recurrent Decoding Cell},
-    author={Wen, Ying and Xie, Kai and He, Lianghua},
-    journal={arXiv, preprint arXiv:1911.09401},
-    year={2019}
+@inproceedings{wen2020segmenting,
+  title={Segmenting Medical MRI via Recurrent Decoding Cell.},
+  author={Wen, Ying and Xie, Kai and He, Lianghua},
+  booktitle={AAAI},
+  pages={12452--12459},
+  year={2020}
 }
 ```
 
