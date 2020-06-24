@@ -1,5 +1,6 @@
 from loader.brainwebLoader import brainwebLoader
 from loader.mrbrainsLoader import mrbrainsLoader
+from loader.hvsmrLoader import hvsmrLoader
 
 
 def get_loader(name):
